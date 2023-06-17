@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=URL to Clip Handler
+Exec=url-to-clip %u
+StartupNotify=false
+MimeType=x-scheme-handler/http;x-scheme-handler/https

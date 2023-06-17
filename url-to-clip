@@ -1,0 +1,9 @@
+#!/usr/bin/fish
+
+set URL $argv[1]
+set URL_ESCAPED (echo -n $URL | sed 's/&/&amp;/')
+
+zenity --title URL --question --text "A program is trying to open the following URL:\n\n$URL_ESCAPED\n\nWould you like to copy it to the clipboard?"
+if test $status -ne 0; exit; end
+
+echo -n $URL | xclip -in -selection clipboard
